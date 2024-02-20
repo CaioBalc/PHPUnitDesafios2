@@ -1,0 +1,17 @@
+{
+    "name": "imply/php-unit-desafios2",
+    "autoload": {
+        "psr-4": {
+            "Imply\\PhpUnitDesafios2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CaioBalc",
+            "email": "balczarekcaio@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
