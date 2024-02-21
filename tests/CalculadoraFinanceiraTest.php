@@ -19,15 +19,15 @@ class CalculadoraFinanceiraTest extends TestCase{
         $calculadora = new CalculadoraFinanceira();
         $n = 12;
 
-        $this->assertEquals(1218.99, $calculadora->calcularJurosCompostos(1000, 0.02, 10, $n));
+        $this->assertEquals(218.99, $calculadora->calcularJurosCompostos(1000, 0.02, 10, $n));
 
         $this->assertEquals(0.00, $calculadora->calcularJurosCompostos(0, 0.02, 10, $n));
 
-        $this->assertEquals(-1218.99, $calculadora->calcularJurosCompostos(-1000, 0.02, 10, $n));
+        $this->assertEquals(-218.99, $calculadora->calcularJurosCompostos(-1000, 0.02, 10, $n));
     }
 
     public function testCalcularAmortizacao() {
         $calculadora = new CalculadoraFinanceira();
-        
+
     }
 }

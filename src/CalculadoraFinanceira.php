@@ -8,7 +8,8 @@ class CalculadoraFinanceira {
 
     public function calcularJurosCompostos($capital, $taxa, $tempo, $n) {
         $montante = $capital * pow((1 + $taxa), $tempo);
-        return number_format($montante, 2, ".","");
+        $juros = $montante - $capital;
+        return number_format($juros, 2, ".","");
     }
 
     public function calcularAmortizacao($capital, $taxa, $tempo, $tipo) {
