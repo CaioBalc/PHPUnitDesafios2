@@ -13,11 +13,6 @@ class CalculadoraFinanceira {
     }
 
     public function calcularAmortizacao($capital, $taxa, $tempo, $tipo) {
-        // $receber = $capital * (1 - $taxa * $tempo);
-        // return number_format($receber, 2, ".","");
-        // $amortizacao = $capital / $tempo;
-        // $prestacao = $amortizacao + ($taxa / $capital);
-
         $amortizacao = array();
         if ($tipo == 'SAC') {
             for ($i = 0; $i < $tempo; $i++) {
@@ -31,6 +26,7 @@ class CalculadoraFinanceira {
                     'parcela' => number_format($parcela, 2, ".",""),
                     'saldoDevedor' => number_format($capital, 2, ".",""));
             }
+            
         } elseif ($tipo == 'Price') {
             $parcela = $capital * $taxa / (1 - pow(1 + $taxa, -$tempo)); #111.32
             for ($i = 0; $i < $tempo; $i++) {
@@ -43,6 +39,7 @@ class CalculadoraFinanceira {
                     'parcela' => number_format($parcela, 2, ".",""),
                     'saldoDevedor' => number_format($capital, 2, ".",""));
             }
+            
         }
         return $amortizacao;
     }
